@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "p/unsEVLCXooNhoNDFb94hfZgMPixVyDdDC0iDpETBG17Qwf/bVvv5NGg4PEERLJRaX3rmZjQdYQCXt0zVA1+g==",
+  "dgSpecHash": "n2FfLdk+KMNgPUslRCbCe/m1oBBJw+EUEZnBQSBtep4sGAhKGe+tSf6edT4/7n/pzk1W5Ch+RU0/Uk4PuqTYvA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryManagment.Infrastructure.Build\\LibraryManagment.Infrastructure.Build.csproj",
+  "projectFilePath": "C:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryManagment.Infrastructure.Build\\LibraryManagment.Infrastructure.Build.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryManagment.Api\\LibraryManagment.Api.csproj": {}
+    "C:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryManagment.Api\\LibraryManagment.Api.csproj": {}
   },
   "projects": {
-    "c:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryManagment.Api\\LibraryManagment.Api.csproj": {
+    "C:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryManagment.Api\\LibraryManagment.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryManagment.Api\\LibraryManagment.Api.csproj",
+        "projectUniqueName": "C:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryManagment.Api\\LibraryManagment.Api.csproj",
         "projectName": "LibraryManagment.Api",
-        "projectPath": "c:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryManagment.Api\\LibraryManagment.Api.csproj",
+        "projectPath": "C:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryManagment.Api\\LibraryManagment.Api.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryManagment.Api\\obj\\",
+        "outputPath": "C:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryManagment.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",

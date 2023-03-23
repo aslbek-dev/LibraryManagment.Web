@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryMangament.Tests.Unit\\LibraryMangament.Tests.Unit.csproj": {}
+    "C:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryMangament.Tests.Unit\\LibraryMangament.Tests.Unit.csproj": {}
   },
   "projects": {
-    "c:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryMangament.Tests.Unit\\LibraryMangament.Tests.Unit.csproj": {
+    "C:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryMangament.Tests.Unit\\LibraryMangament.Tests.Unit.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryMangament.Tests.Unit\\LibraryMangament.Tests.Unit.csproj",
+        "projectUniqueName": "C:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryMangament.Tests.Unit\\LibraryMangament.Tests.Unit.csproj",
         "projectName": "LibraryMangament.Tests.Unit",
-        "projectPath": "c:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryMangament.Tests.Unit\\LibraryMangament.Tests.Unit.csproj",
+        "projectPath": "C:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryMangament.Tests.Unit\\LibraryMangament.Tests.Unit.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryMangament.Tests.Unit\\obj\\",
+        "outputPath": "C:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryMangament.Tests.Unit\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",

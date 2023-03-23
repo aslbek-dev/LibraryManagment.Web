@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryManagment.Infrastructure.Build\\LibraryManagment.Infrastructure.Build.csproj": {}
+    "C:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryManagment.Infrastructure.Build\\LibraryManagment.Infrastructure.Build.csproj": {}
   },
   "projects": {
-    "c:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryManagment.Infrastructure.Build\\LibraryManagment.Infrastructure.Build.csproj": {
+    "C:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryManagment.Infrastructure.Build\\LibraryManagment.Infrastructure.Build.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryManagment.Infrastructure.Build\\LibraryManagment.Infrastructure.Build.csproj",
+        "projectUniqueName": "C:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryManagment.Infrastructure.Build\\LibraryManagment.Infrastructure.Build.csproj",
         "projectName": "LibraryManagment.Infrastructure.Build",
-        "projectPath": "c:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryManagment.Infrastructure.Build\\LibraryManagment.Infrastructure.Build.csproj",
+        "projectPath": "C:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryManagment.Infrastructure.Build\\LibraryManagment.Infrastructure.Build.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryManagment.Infrastructure.Build\\obj\\",
+        "outputPath": "C:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryManagment.Infrastructure.Build\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",

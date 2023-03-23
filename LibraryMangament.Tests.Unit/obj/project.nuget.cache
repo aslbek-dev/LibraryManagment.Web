@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3BmOq5YlQzv9h7402aOOA9Ma6bY7vNpgLiQeIcR1no4pJeyz9Ekhz8QsUgEvN8P3V1XccPX44ys1cJCdrJcyWg==",
+  "dgSpecHash": "SGtXaIg9quWjNnzwTG9Bs+6o3fPIvyJWaSXjnSnA72HLTDAtiNSY9JwwSdloZhYZ8HpLv9v9LGsLUOUWBksdVQ==",
   "success": true,
-  "projectFilePath": "c:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryMangament.Tests.Unit\\LibraryMangament.Tests.Unit.csproj",
+  "projectFilePath": "C:\\Users\\user\\dotnet projects\\LibraryManagment.Web\\LibraryMangament.Tests.Unit\\LibraryMangament.Tests.Unit.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.codecoverage\\17.3.2\\microsoft.codecoverage.17.3.2.nupkg.sha512",
