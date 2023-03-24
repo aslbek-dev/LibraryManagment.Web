@@ -7,7 +7,7 @@ namespace LibraryManagment.Api.Models.Books
 {
     public class Book
     {
-        public int BookId { get; set; }
+        public Guid BookId { get; set; }
         public string Name { get; set; }
         public string Author { get; set; }
         public DateTime PublisherAt { get; set; }

@@ -7,9 +7,9 @@ namespace LibraryManagment.Api.Models.Rents
 {
     public class Rent
     {
-        public int RentId { get; set; }
-        public int UserId { get; set; }
-        public int BookId { get; set; }
+        public Guid RentId { get; set; }
+        public Guid UserId { get; set; }
+        public Guid BookId { get; set; }
         public DateTime RentAt { get; set; }
         public DateTime ReturnAt { get; set; }
         public bool IsReturned { get; set; }
