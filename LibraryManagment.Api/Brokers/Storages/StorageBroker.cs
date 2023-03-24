@@ -1,5 +1,8 @@
 using System.Reflection;
 using EFxceptions;
+using LibraryManagment.Api.Models.Books;
+using LibraryManagment.Api.Models.Rents;
+using LibraryManagment.Api.Models.Users;
 using Microsoft.EntityFrameworkCore;
 
 namespace LibraryManagment.Api.Brokers.Storages
@@ -12,7 +15,9 @@ namespace LibraryManagment.Api.Brokers.Storages
         { }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+           ConfigureBook(modelBuilder.Entity<Book>());
+           ConfigureRent(modelBuilder.Entity<Rent>());
+           ConfigureUser(modelBuilder.Entity<User>());
         }
     }
 }
