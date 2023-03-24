@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LibraryManagment.Api.Models.Rents;
 
 namespace LibraryManagment.Api.Models.Books
 {
@@ -12,5 +13,6 @@ namespace LibraryManagment.Api.Models.Books
         public string Author { get; set; }
         public DateTime PublisherAt { get; set; }
         public int Version { get; set; }
+        public virtual ICollection<Rent> Rents { get; set; }
     }
 }
