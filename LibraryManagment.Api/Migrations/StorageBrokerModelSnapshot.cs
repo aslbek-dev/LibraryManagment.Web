@@ -22,10 +22,29 @@ namespace LibraryManagment.Api.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("LibraryManagment.Api.Models.Baskets.Basket", b =>
+                {
+                    b.Property<Guid>("BasketId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("BookId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("BasketId");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
+
+                    b.ToTable("Baskets");
+                });
+
             modelBuilder.Entity("LibraryManagment.Api.Models.Books.Book", b =>
                 {
                     b.Property<Guid>("BookId")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Author")
@@ -45,12 +64,16 @@ namespace LibraryManagment.Api.Migrations
 
                     b.HasKey("BookId");
 
-                    b.ToTable("Books", (string)null);
+                    b.ToTable("Books");
                 });
 
             modelBuilder.Entity("LibraryManagment.Api.Models.Rents.Rent", b =>
                 {
-                    b.Property<Guid>("BookId")
+                    b.Property<Guid>("RentId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("BasketId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<bool>("IsReturned")
@@ -59,20 +82,15 @@ namespace LibraryManagment.Api.Migrations
                     b.Property<DateTime>("RentAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("RentId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<DateTime>("ReturnAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
+                    b.HasKey("RentId");
 
-                    b.HasKey("BookId");
+                    b.HasIndex("BasketId")
+                        .IsUnique();
 
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Rents", (string)null);
+                    b.ToTable("Rents");
                 });
 
             modelBuilder.Entity("LibraryManagment.Api.Models.Users.User", b =>
@@ -110,36 +128,52 @@ namespace LibraryManagment.Api.Migrations
                         .IsUnique()
                         .HasFilter("[Email] IS NOT NULL");
 
-                    b.ToTable("Users", (string)null);
+                    b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("LibraryManagment.Api.Models.Rents.Rent", b =>
+            modelBuilder.Entity("LibraryManagment.Api.Models.Baskets.Basket", b =>
                 {
-                    b.HasOne("LibraryManagment.Api.Models.Books.Book", "Books")
-                        .WithMany("Rents")
-                        .HasForeignKey("BookId")
+                    b.HasOne("LibraryManagment.Api.Models.Users.User", "User")
+                        .WithOne("Basket")
+                        .HasForeignKey("LibraryManagment.Api.Models.Baskets.Basket", "UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("LibraryManagment.Api.Models.Users.User", "Users")
-                        .WithMany("Rents")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Books");
-
-                    b.Navigation("Users");
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("LibraryManagment.Api.Models.Books.Book", b =>
                 {
-                    b.Navigation("Rents");
+                    b.HasOne("LibraryManagment.Api.Models.Baskets.Basket", "Basket")
+                        .WithMany("Books")
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Basket");
+                });
+
+            modelBuilder.Entity("LibraryManagment.Api.Models.Rents.Rent", b =>
+                {
+                    b.HasOne("LibraryManagment.Api.Models.Baskets.Basket", "Basket")
+                        .WithOne("Rent")
+                        .HasForeignKey("LibraryManagment.Api.Models.Rents.Rent", "BasketId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Basket");
+                });
+
+            modelBuilder.Entity("LibraryManagment.Api.Models.Baskets.Basket", b =>
+                {
+                    b.Navigation("Books");
+
+                    b.Navigation("Rent");
                 });
 
             modelBuilder.Entity("LibraryManagment.Api.Models.Users.User", b =>
                 {
-                    b.Navigation("Rents");
+                    b.Navigation("Basket");
                 });
 #pragma warning restore 612, 618
         }

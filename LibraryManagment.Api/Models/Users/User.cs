@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LibraryManagment.Api.Models.Baskets;
 using LibraryManagment.Api.Models.Rents;
 
 namespace LibraryManagment.Api.Models.Users
@@ -15,6 +16,7 @@ namespace LibraryManagment.Api.Models.Users
         public Gender Gender { get; set; }
         public  DateTime Birthday { get; set; }
         public UserType UserType { get; set; }
-        public virtual ICollection<Rent> Rents { get; set; }
+        //EF relations
+        public Basket Basket { get; set; }
     }
 }

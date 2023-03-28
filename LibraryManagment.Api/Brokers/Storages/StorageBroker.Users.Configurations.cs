@@ -1,19 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using LibraryManagment.Api.Models.Users;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace LibraryManagment.Api.Brokers.Storages
 {
-    public partial class StorageBroker
+    public class UserTypeConfiguration : IEntityTypeConfiguration<User>
     {
-        public void ConfigureUser(EntityTypeBuilder<User> builder)
+        public void Configure(EntityTypeBuilder<User> builder)
         {
-            builder.ToTable("Users");
-
             builder.HasKey(user => user.UserId);
 
             builder

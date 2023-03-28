@@ -10,6 +10,5 @@ namespace LibraryManagment.Api.Brokers.Storages
     public partial class StorageBroker
     {
         public DbSet<Rent> Rents { get; set; }
-        
     }
 }
