@@ -44,6 +44,8 @@ namespace LibraryManagment.Api.Brokers.Storages
         {
             string connectionString = 
                 this.configuration.GetConnectionString(name: "SqlServerConnectionString");
+                
+            optionsBuilder.UseSqlServer(connectionString);
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
