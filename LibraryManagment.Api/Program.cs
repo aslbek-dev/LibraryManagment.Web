@@ -2,9 +2,6 @@ using LibraryManagment.Api.Brokers.Storages;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-
-string connectionString = builder.Configuration.
-    GetConnectionString(name: "SqlServerConnectionString");
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -12,8 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<StorageBroker>(option=>
-    option.UseSqlServer(connectionString));
+builder.Services.AddDbContext<StorageBroker>();
 
 
 var app = builder.Build();
