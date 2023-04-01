@@ -14,7 +14,7 @@ namespace LibraryManagment.Api.Models.Users
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
         public Gender Gender { get; set; }
-        public  DateTime Birthday { get; set; }
+        public  DateTimeOffset Birthday { get; set; }
         public UserType UserType { get; set; }
         //EF relations
         public Basket Basket { get; set; }

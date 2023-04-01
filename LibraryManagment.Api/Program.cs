@@ -1,4 +1,5 @@
 using LibraryManagment.Api.Brokers.Storages;
+using LibraryManagment.Api.Services.Foundations.Users;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<StorageBroker>();
+builder.Services.AddTransient<IStorageBroker, StorageBroker>();
+builder.Services.AddTransient<IUserService, UserService>();
 
 
 var app = builder.Build();
