@@ -16,7 +16,7 @@ namespace LibraryManagment.Api.Services.Foundations.Users
         }
         public async ValueTask<User> AddUserAsync(User user)
         {
-           throw new NotImplementedException();
+           return await this.storageBroker.InsertUserAsync(user);
         }
     }
 }
