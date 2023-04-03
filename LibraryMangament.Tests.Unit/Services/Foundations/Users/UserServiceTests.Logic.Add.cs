@@ -16,7 +16,7 @@ namespace LibraryMangament.Tests.Unit.Services.Foundations.Users
             User randomUser = CreateRandomUser();
             User inputUser = randomUser;
             User persistedUser = inputUser;
-            User expectedUser = persistedUser;
+            User expectedUser = persistedUser.DeepClone();
 
             this.storageBrokerMock.Setup(broker =>
                 broker.InsertUserAsync(inputUser)).ReturnsAsync(persistedUser);
