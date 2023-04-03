@@ -11,9 +11,9 @@ namespace LibraryManagment.Api.Services.Foundations.Baskets
             this.storageBroker = storageBroker;
         }
 
-        public ValueTask<Basket> AddBasketAsync(Basket basket)
+        public async ValueTask<Basket> AddBasketAsync(Basket basket)
         {
-            throw new NotImplementedException();
+            return await this.storageBroker.InsertBasketAsync(basket);
         }
     }
 }
