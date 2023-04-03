@@ -10,9 +10,9 @@ namespace LibraryManagment.Api.Services.Foundations.Books
         {
             this.storageBroker = storageBroker;
         }
-        public ValueTask<Book> AddBookAsync(Book book)
+        public async ValueTask<Book> AddBookAsync(Book book)
         {
-            throw new NotImplementedException();
+            return await this.storageBroker.InsertBookAsync(book);
         }
     }
 }
