@@ -16,7 +16,7 @@ namespace LibraryManagment.Api.Services.Foundations.Rents
         }
         public async ValueTask<Rent> AddRentAsync(Rent rent)
         {
-            throw new NotImplementedException();
+            return await this.storageBroker.InsertRentAsync(rent);
         }
     }
 }
