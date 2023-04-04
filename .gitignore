@@ -4,3 +4,5 @@
 /LibraryMangament.Tests.Unit/bin
 /LibraryManagment.Infrastructure.Build/obj
 /LibraryManagment.Infrastructure.Build/bin
+.vscode/tasks.json
+.vscode/launch.json
