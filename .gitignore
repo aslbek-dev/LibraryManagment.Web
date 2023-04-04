@@ -1,7 +1,7 @@
 /LibraryManagment.Api/bin
 /LibraryManagment.Api/obj
-/LibraryMangament.Tests.Unit/obj
-/LibraryMangament.Tests.Unit/bin
+/LibraryManagment.Tests.Unit/obj
+/LibraryManagment.Tests.Unit/bin
 /LibraryManagment.Infrastructure.Build/obj
 /LibraryManagment.Infrastructure.Build/bin
 .vscode/tasks.json
