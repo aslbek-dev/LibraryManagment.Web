@@ -16,7 +16,7 @@ namespace LibraryManagment.Api.Models.Rents
         public bool IsReturned { get; set; } 
         //The basketId property is the Foreign Key
         public Guid BasketId { get; set; }
-        //EF relations// one to one
+        [JsonIgnore]
         public Basket Basket { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using LibraryManagment.Api.Models.Books;
 using LibraryManagment.Api.Models.Rents;
@@ -12,15 +13,14 @@ namespace LibraryManagment.Api.Models.Baskets
     {
 
         public Guid BasketId { get; set; }
-        //This bookId is Foreign Key
         public Guid BookId { get; set; }
-        // EF relations // one to many
-        public IQueryable<Book> Books { get; set; }
-        //This UserId is Foreign Key
         public Guid UserId { get; set; }
-        // EF relations // one to one
+        
+        [JsonIgnore]
+        public IQueryable<Book> Books { get; set; }
+        [JsonIgnore]
         public User User { get; set; }
-        //EF relations // one to one
+        [JsonIgnore]
         public Rent Rent { get; set; }
     }
 }

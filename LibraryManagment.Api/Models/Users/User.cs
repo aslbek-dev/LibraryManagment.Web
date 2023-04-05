@@ -1,9 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using LibraryManagment.Api.Models.Baskets;
-using LibraryManagment.Api.Models.Rents;
+using System.Text.Json.Serialization;
 
 namespace LibraryManagment.Api.Models.Users
 {
@@ -16,7 +12,7 @@ namespace LibraryManagment.Api.Models.Users
         public Gender Gender { get; set; }
         public  DateTimeOffset Birthday { get; set; }
         public UserType UserType { get; set; }
-        //EF relations
+        [JsonIgnore]
         public Basket Basket { get; set; }
     }
 }

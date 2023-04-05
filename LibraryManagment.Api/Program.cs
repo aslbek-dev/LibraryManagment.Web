@@ -1,6 +1,9 @@
+using System.Collections.Immutable;
 using LibraryManagment.Api.Brokers.Storages;
+using LibraryManagment.Api.Services.Foundations.Baskets;
+using LibraryManagment.Api.Services.Foundations.Books;
+using LibraryManagment.Api.Services.Foundations.Rents;
 using LibraryManagment.Api.Services.Foundations.Users;
-using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
@@ -13,7 +16,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<StorageBroker>();
 builder.Services.AddTransient<IStorageBroker, StorageBroker>();
 builder.Services.AddTransient<IUserService, UserService>();
-
+builder.Services.AddTransient<IBookService, BookService>();
+builder.Services.AddTransient<IRentService, RentService>();
+builder.Services.AddTransient<IBasketService, BasketService>();
 
 var app = builder.Build();
 
