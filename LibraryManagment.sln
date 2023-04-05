@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagment.Api", "Lib
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagment.Infrastructure.Build", "LibraryManagment.Infrastructure.Build\LibraryManagment.Infrastructure.Build.csproj", "{4B7F8D11-B289-4E5C-894A-E78AFA896B91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryMangament.Tests.Unit", "LibraryMangament.Tests.Unit\LibraryMangament.Tests.Unit.csproj", "{1A8942A9-1E5E-4CB0-A12E-EFF5A13910D5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagment.Tests.Unit", "LibraryManagment.Tests.Unit\LibraryManagment.Tests.Unit.csproj", "{1A8942A9-1E5E-4CB0-A12E-EFF5A13910D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
