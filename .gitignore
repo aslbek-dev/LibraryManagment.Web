@@ -6,3 +6,4 @@
 /LibraryManagment.Infrastructure.Build/bin
 .vscode/tasks.json
 .vscode/launch.json
+.vscode/settings.json
