@@ -1,9 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 using LibraryManagment.Api.Models.Baskets;
-using LibraryManagment.Api.Models.Rents;
 
 namespace LibraryManagment.Api.Models.Books
 {
@@ -14,7 +10,7 @@ namespace LibraryManagment.Api.Models.Books
         public string Author { get; set; }
         public DateTime PublisherAt { get; set; }
         public int Version { get; set; }
-        //EF relations// many to one
+        [JsonIgnore]
         public Basket Basket { get; set; }
     }
 }

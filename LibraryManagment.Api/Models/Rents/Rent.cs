@@ -1,10 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 using LibraryManagment.Api.Models.Baskets;
-using LibraryManagment.Api.Models.Books;
-using LibraryManagment.Api.Models.Users;
 
 namespace LibraryManagment.Api.Models.Rents
 {
