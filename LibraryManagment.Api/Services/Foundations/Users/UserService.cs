@@ -21,7 +21,7 @@ namespace LibraryManagment.Api.Services.Foundations.Users
 
         public IQueryable<User> RetrieveAllUsers()
         {
-            throw new NotImplementedException();
+            return this.storageBroker.SelectAllUsers();
         }
     }
 }
