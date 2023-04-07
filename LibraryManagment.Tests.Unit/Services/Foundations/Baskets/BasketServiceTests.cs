@@ -5,7 +5,7 @@ using LibraryManagment.Api.Services.Foundations.Baskets;
 using Moq;
 using Tynamix.ObjectFiller;
 
-namespace LibraryMangament.Tests.Unit.Services.Foundations.Baskets
+namespace LibraryManagment.Tests.Unit.Services.Foundations.Baskets
 {
     public partial class BasketServiceTests
     {

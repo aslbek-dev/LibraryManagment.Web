@@ -4,7 +4,7 @@ using LibraryManagment.Api.Models.Baskets;
 using Moq;
 using Xunit;
 
-namespace LibraryMangament.Tests.Unit.Services.Foundations.Baskets
+namespace LibraryManagment.Tests.Unit.Services.Foundations.Baskets
 {
     public partial class BasketServiceTests
     {
