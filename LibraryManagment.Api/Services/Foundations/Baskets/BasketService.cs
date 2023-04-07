@@ -18,7 +18,7 @@ namespace LibraryManagment.Api.Services.Foundations.Baskets
 
         public IQueryable<Basket> RetrieveAllBaskets()
         {
-            throw new NotImplementedException();
+            return this.storageBroker.SelectAllBaskets();
         }
         
         public async ValueTask<Basket> RetrieveBasketByIdAsync(Guid id)
