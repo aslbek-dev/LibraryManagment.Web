@@ -23,6 +23,11 @@ namespace LibraryManagment.Tests.Unit.Services.Foundations.Baskets
 
         private static DateTimeOffset GetRandomDateTime() =>
             new DateTimeRange(earliestDate: DateTime.UnixEpoch).GetValue();
+        private static int GetRandomNumber() =>
+            new IntRange(min: 2, max: 12).GetValue();
+        private static IQueryable<Basket> CreateRandomBaskets() =>
+            CreateBasketFiller(dates: GetRandomDateTime()).
+                Create(count: GetRandomNumber()).AsQueryable();
         
         private static Basket CreateRandomBasket() =>
             CreateBasketFiller(dates: GetRandomDateTime()).Create();
