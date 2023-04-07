@@ -21,9 +21,9 @@ namespace LibraryManagment.Api.Services.Foundations.Books
             throw new NotImplementedException();
         }
 
-        public ValueTask<Book> RetrieveBookByIdAsync(Guid id)
+        public async ValueTask<Book> RetrieveBookByIdAsync(Guid id)
         {
-            throw new NotImplementedException();
+            return await this.storageBroker.SelectBookByIdAsync(id);
         }
 
         public ValueTask<Book> ModifyBookAsync(Book book)
