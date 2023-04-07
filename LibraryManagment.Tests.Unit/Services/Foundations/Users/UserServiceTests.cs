@@ -24,6 +24,16 @@ namespace LibraryMangament.Tests.Unit.Services.Foundations.Users
         
         private static User CreateRandomUser() =>
             CreateUserFiller(dates: GetRandomDateTimeOffset()).Create();
+        
+        private static int GetRandomNumber() =>
+            new IntRange(min: 2, max: 10).GetValue();
+        
+        private IQueryable<User> CreateRandomUsers()
+        {
+            return CreateUserFiller(dates: GetRandomDateTimeOffset())
+                .Create(count: GetRandomNumber()).AsQueryable();
+        }
+
         private static Filler<User> CreateUserFiller(DateTimeOffset dates)
         {
             var filler = new Filler<User>();

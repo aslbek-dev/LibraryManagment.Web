@@ -18,5 +18,10 @@ namespace LibraryManagment.Api.Services.Foundations.Users
         {
            return await this.storageBroker.InsertUserAsync(user);
         }
+
+        public IQueryable<User> RetrieveAllUsers()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
