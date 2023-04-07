@@ -20,9 +20,9 @@ namespace LibraryManagment.Api.Services.Foundations.Rents
             throw new NotImplementedException();
         }
 
-        public ValueTask<Rent> RetrieveRentByIdAsync(Guid id)
+        public async ValueTask<Rent> RetrieveRentByIdAsync(Guid id)
         {
-            throw new NotImplementedException();
+           return await this.storageBroker.SelectRentByIdAsync(id);
         }
 
         public ValueTask<Rent> ModifyRentAsync(Rent Rent)
