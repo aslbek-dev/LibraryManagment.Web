@@ -19,7 +19,14 @@ namespace LibraryManagment.Tests.Unit.Services.Foundations.Books
         }
         private static DateTimeOffset GetRandomDateTimeOffset() =>
             new DateTimeRange(earliestDate: DateTime.UnixEpoch).GetValue();
-
+        private static int GetRandomNumber() =>
+            new IntRange(min: 2, max: 11).GetValue();
+        
+        private static IQueryable<Book> CreateRandomBooks()
+        {
+            return CreateBookFiller(dates: GetRandomDateTimeOffset())
+                .Create(count: GetRandomNumber()).AsQueryable();
+        }
 
         private static Book CreateRandomBook() =>
             CreateBookFiller(dates: GetRandomDateTimeOffset()).Create();
