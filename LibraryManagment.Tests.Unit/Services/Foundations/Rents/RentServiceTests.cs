@@ -4,7 +4,7 @@ using LibraryManagment.Api.Services.Foundations.Rents;
 using Moq;
 using Tynamix.ObjectFiller;
 
-namespace LibraryMangament.Tests.Unit.Services.Foundations.Rents
+namespace LibraryManagment.Tests.Unit.Services.Foundations.Rents
 {
     public partial class RentServiceTests
     {

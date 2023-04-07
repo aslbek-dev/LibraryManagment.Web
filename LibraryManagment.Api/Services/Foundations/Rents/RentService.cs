@@ -14,5 +14,25 @@ namespace LibraryManagment.Api.Services.Foundations.Rents
         {
             return await this.storageBroker.InsertRentAsync(rent);
         }
+
+        public IQueryable<Rent> RetrieveAllRents()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ValueTask<Rent> RetrieveRentByIdAsync(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ValueTask<Rent> ModifyRentAsync(Rent Rent)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ValueTask<Rent> RemoveRentByIdAsync(Guid id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

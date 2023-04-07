@@ -4,7 +4,7 @@ using LibraryManagment.Api.Models.Books;
 using Moq;
 using Xunit;
 
-namespace LibraryMangament.Tests.Unit.Services.Foundations.Books
+namespace LibraryManagment.Tests.Unit.Services.Foundations.Books
 {
     public partial class BookServiceTests
     {

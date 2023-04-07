@@ -4,7 +4,7 @@ using LibraryManagment.Api.Models.Users;
 using Moq;
 using Xunit;
 
-namespace LibraryMangament.Tests.Unit.Services.Foundations.Users
+namespace LibraryManagment.Tests.Unit.Services.Foundations.Users
 {
     public partial class UserServiceTests
     {

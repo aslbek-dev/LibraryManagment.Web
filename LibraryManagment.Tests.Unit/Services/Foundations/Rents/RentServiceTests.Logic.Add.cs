@@ -4,7 +4,7 @@ using LibraryManagment.Api.Models.Rents;
 using Moq;
 using Xunit;
 
-namespace LibraryMangament.Tests.Unit.Services.Foundations.Rents
+namespace LibraryManagment.Tests.Unit.Services.Foundations.Rents
 {
     public partial class RentServiceTests
     {

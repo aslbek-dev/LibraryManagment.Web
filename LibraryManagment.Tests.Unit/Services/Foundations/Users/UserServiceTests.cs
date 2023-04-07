@@ -4,7 +4,7 @@ using Moq;
 using Tynamix.ObjectFiller;
 using LibraryManagment.Api.Models.Users;
 
-namespace LibraryMangament.Tests.Unit.Services.Foundations.Users
+namespace LibraryManagment.Tests.Unit.Services.Foundations.Users
 {
     public partial class UserServiceTests
     {

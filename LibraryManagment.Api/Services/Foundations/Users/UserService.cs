@@ -23,5 +23,19 @@ namespace LibraryManagment.Api.Services.Foundations.Users
         {
             return this.storageBroker.SelectAllUsers();
         }
+
+        public ValueTask<User> ModifyUserAsync(User User)
+        {
+            throw new NotImplementedException();
+        }
+        public ValueTask<User> RetrieveUserByIdAsync(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ValueTask<User> RemoveUserByIdAsync(Guid id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

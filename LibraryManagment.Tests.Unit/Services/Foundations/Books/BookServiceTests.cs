@@ -4,7 +4,7 @@ using LibraryManagment.Api.Services.Foundations.Books;
 using Moq;
 using Tynamix.ObjectFiller;
 
-namespace LibraryMangament.Tests.Unit.Services.Foundations.Books
+namespace LibraryManagment.Tests.Unit.Services.Foundations.Books
 {
     public partial class BookServiceTests
     {
