@@ -21,6 +21,15 @@ namespace LibraryManagment.Tests.Unit.Services.Foundations.Rents
         private static DateTimeOffset GetRandomDateTime() =>
             new DateTimeRange(earliestDate: DateTime.UnixEpoch).GetValue();
         
+        private static int GetRandomNumber() =>
+            new IntRange(min: 2, max: 10).GetValue();
+        
+        private IQueryable<Rent> CreateRandomRents()
+        {
+            return CreateRentFiller(GetRandomDateTime()).
+                Create(count: GetRandomNumber()).AsQueryable();
+        }
+        
         private static Rent CreateRandomRent() =>
             CreateRentFiller(GetRandomDateTime()).Create();
         private static Filler<Rent> CreateRentFiller(DateTimeOffset dates)
