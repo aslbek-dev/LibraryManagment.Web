@@ -1,3 +1,4 @@
+using LibraryManagment.Api.Brokers.DateTime;
 using LibraryManagment.Api.Brokers.Storages;
 using LibraryManagment.Api.Models.Rents;
 using LibraryManagment.Api.Services.Foundations.Rents;
@@ -9,13 +10,16 @@ namespace LibraryManagment.Tests.Unit.Services.Foundations.Rents
     public partial class RentServiceTests
     {
         private readonly Mock<IStorageBroker> storageBrokerMock;
+        private readonly Mock<IDateTimeBroker> dateTimeBrokerMock;
         private readonly IRentService rentService;
         public RentServiceTests()
         {
             this.storageBrokerMock = new Mock<IStorageBroker>();
+            this.dateTimeBrokerMock = new Mock<IDateTimeBroker>();
             this.rentService = new RentService
             (
-                storageBroker: storageBrokerMock.Object
+                storageBroker: storageBrokerMock.Object,
+                dateTimeBroker: dateTimeBrokerMock.Object
             );
         }
         private static DateTimeOffset GetRandomDateTime() =>
@@ -23,6 +27,10 @@ namespace LibraryManagment.Tests.Unit.Services.Foundations.Rents
         
         private static int GetRandomNumber() =>
             new IntRange(min: 2, max: 10).GetValue();
+        
+        private static Rent CreateRandomRent(DateTimeOffset date) =>
+            CreateRentFiller(dates: date).Create();
+
         
         private IQueryable<Rent> CreateRandomRents()
         {
