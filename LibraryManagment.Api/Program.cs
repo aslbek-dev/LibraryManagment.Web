@@ -1,4 +1,5 @@
 using System.Collections.Immutable;
+using LibraryManagment.Api.Brokers.DateTime;
 using LibraryManagment.Api.Brokers.Storages;
 using LibraryManagment.Api.Services.Foundations.Baskets;
 using LibraryManagment.Api.Services.Foundations.Books;
@@ -15,6 +16,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<StorageBroker>();
 builder.Services.AddTransient<IStorageBroker, StorageBroker>();
+builder.Services.AddTransient<IDateTimeBroker, DateTimeBroker>();
 builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddTransient<IBookService, BookService>();
 builder.Services.AddTransient<IRentService, RentService>();
