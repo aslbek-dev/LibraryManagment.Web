@@ -6,8 +6,8 @@ namespace LibraryManagment.Api.Models.Rents
     public class Rent
     {
         public Guid RentId { get; set; }
-        public DateTime RentAt { get; set; }
-        public DateTime ReturnAt { get; set; }
+        public DateTimeOffset RentAt { get; set; }
+        public DateTimeOffset ReturnAt { get; set; }
         public bool IsReturned { get; set; } 
         //The basketId property is the Foreign Key
         public Guid BasketId { get; set; }

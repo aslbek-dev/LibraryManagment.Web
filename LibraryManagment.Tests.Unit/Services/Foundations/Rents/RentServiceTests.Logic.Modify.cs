@@ -19,7 +19,7 @@ namespace LibraryManagment.Tests.Unit.Services.Foundations.Rents
             DateTimeOffset randomDateTime = GetRandomDateTime();
             Rent randomRent = CreateRandomRent(randomDateTime);
             Rent inputRent = randomRent;
-            Rent storageRent = inputRent;
+            Rent storageRent = inputRent.DeepClone();
             Rent updateRent = storageRent;
             Rent expectedRent = updateRent.DeepClone();
 
