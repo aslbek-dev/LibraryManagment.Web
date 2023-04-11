@@ -1,3 +1,4 @@
+using LibraryManagment.Api.Brokers.DateTime;
 using LibraryManagment.Api.Brokers.Storages;
 using LibraryManagment.Api.Models.Rents;
 
@@ -6,9 +7,13 @@ namespace LibraryManagment.Api.Services.Foundations.Rents
     public class RentService : IRentService
     {
         private readonly IStorageBroker storageBroker;
-        public RentService(IStorageBroker storageBroker)
+        private readonly IDateTimeBroker dateTimeBroker;
+        public RentService(
+            IStorageBroker storageBroker,
+            IDateTimeBroker dateTimeBroker)
         {
             this.storageBroker = storageBroker;
+            this.dateTimeBroker = dateTimeBroker;
         }
         public async ValueTask<Rent> AddRentAsync(Rent rent)
         {
@@ -25,9 +30,15 @@ namespace LibraryManagment.Api.Services.Foundations.Rents
            return await this.storageBroker.SelectRentByIdAsync(id);
         }
 
-        public ValueTask<Rent> ModifyRentAsync(Rent Rent)
+        public async ValueTask<Rent> ModifyRentAsync(Rent rent)
         {
-            throw new NotImplementedException();
+            DateTimeOffset d = this.dateTimeBroker.GetCurrentDateTime();
+            Rent modifiedRent = null;
+            Rent targetRent = await this.storageBroker.SelectRentByIdAsync(rent.RentId);
+            if(targetRent is not null && DateTimeOffset.Equals(d, rent.RentAt))
+                 modifiedRent = await this.storageBroker.UpdateRentAsync(rent);
+                
+            return modifiedRent;
         }
 
         public ValueTask<Rent> RemoveRentByIdAsync(Guid id)
