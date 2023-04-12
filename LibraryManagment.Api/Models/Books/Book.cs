@@ -8,7 +8,7 @@ namespace LibraryManagment.Api.Models.Books
         public Guid BookId { get; set; }
         public string Name { get; set; }
         public string Author { get; set; }
-        public DateTime PublisherAt { get; set; }
+        public DateTimeOffset PublisherAt { get; set; }
         public int Version { get; set; }
         [JsonIgnore]
         public Basket Basket { get; set; }
