@@ -33,9 +33,12 @@ namespace LibraryManagment.Api.Services.Foundations.Users
             return await this.storageBroker.UpdateUserAsync(user);
         }
 
-        public ValueTask<User> RemoveUserByIdAsync(Guid id)
+        public async ValueTask<User> RemoveUserByIdAsync(Guid id)
         {
-            throw new NotImplementedException();
+            User inputUser = await this.storageBroker.SelectUserByIdAsync(id);
+            User deletedUser = await this.storageBroker.DeleteUserAsync(inputUser);
+
+            return deletedUser;
         }
     }
 }
