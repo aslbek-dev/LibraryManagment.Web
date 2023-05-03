@@ -41,9 +41,12 @@ namespace LibraryManagment.Api.Services.Foundations.Rents
             return modifiedRent;
         }
 
-        public ValueTask<Rent> RemoveRentByIdAsync(Guid id)
+        public async ValueTask<Rent> RemoveRentByIdAsync(Guid id)
         {
-            throw new NotImplementedException();
+            Rent inputRent = await this.storageBroker.SelectRentByIdAsync(id);
+            Rent deletedRent = await this.storageBroker.DeleteRentAsync(inputRent);
+
+            return deletedRent;
         }
     }
 }
