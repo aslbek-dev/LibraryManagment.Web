@@ -26,9 +26,9 @@ namespace LibraryManagment.Api.Services.Foundations.Baskets
             return await this.storageBroker.SelectBasketByIdAsync(id);
         }
 
-        public ValueTask<Basket> ModifyBasketAsync(Basket basket)
+        public async ValueTask<Basket> ModifyBasketAsync(Basket basket)
         {
-            throw new NotImplementedException();
+            return await this.storageBroker.UpdateBasketAsync(basket);
         }
 
         public ValueTask<Basket> RemoveBasketByIdAsync(Guid id)
